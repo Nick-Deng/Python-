@@ -1,0 +1,28 @@
+
+def get_sum(*args):      # *args 支持多个数
+    sum = 0
+    for i in args:
+        sum += i
+    return sum
+print("Sum = ", get_sum(3,4))
+
+
+
+def isprime(num):             #求素数
+    for i in range(2, num):
+        if num% i == 0:
+            return False
+    return True
+
+def getPrime(numMax):
+    primes = []
+    for num1 in range(2, numMax ):
+        if isprime(num1):
+            primes.append(num1)
+    return primes
+maxNum = int(input("search for primes up to: "))
+
+list0fprime = getPrime(maxNum)
+
+for prime in list0fprime:
+    print(prime, end=', ')
